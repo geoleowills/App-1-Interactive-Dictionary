@@ -13,7 +13,7 @@ def translate(w):
     elif w.upper() in data:
         return data[w.upper()]
     elif len(get_close_matches(w, data.keys())) > 0:
-        yn = input("Did you mean to enter %s instead? Enter Y if yes and N if no: " %
+        yn = input("Did you mean to enter %s instead? Enter Y if yes and N if no:" %
                    get_close_matches(w, data.keys())[0])
         if yn == "Y":
             return data[get_close_matches(w, data.keys())[0]]
@@ -39,7 +39,7 @@ while True:
         count = 0
         for item in output:
             count += 1
-            print(f"{count}. {item}")
+            print("%i. %s" % (count, item))
         print("**********")
     else:
         print("**********")
